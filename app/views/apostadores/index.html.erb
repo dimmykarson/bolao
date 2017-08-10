@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apostadores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apostadores.each do |apostador| %>
+      <tr>
+        <td><%= apostador.nome %></td>
+        <td><%= apostador.email %></td>
+        <td><%= link_to 'Show', apostador %></td>
+        <td><%= link_to 'Edit', edit_apostador_path(apostador) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apostador', new_apostador_path %>

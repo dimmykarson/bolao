@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Apostador:</strong>
+  <%= @aposta.apostador %>
+</p>
+
+<p>
+  <strong>Pago:</strong>
+  <%= @aposta.pago %>
+</p>
+
+<%= link_to 'Edit', edit_aposta_path(@aposta) %> |
+<%= link_to 'Back', apostas_path %>

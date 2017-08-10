@@ -1,0 +1,28 @@
+<%= form_with(model: aposta, local: true) do |form| %>
+  <% if aposta.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aposta.errors.count, "error") %> prohibited this aposta from being saved:</h2>
+
+      <ul>
+      <% aposta.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%=form.label :apostador_id %>
+    <%=label_tag aposta.apostador.nome  %>
+    <%= form.hidden_field :apostador_id, id: :aposta_apostador_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pago %>
+    <%= form.check_box :pago, id: :aposta_pago %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

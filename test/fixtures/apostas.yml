@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apostador: one
+  pago: false
+
+two:
+  apostador: two
+  pago: false

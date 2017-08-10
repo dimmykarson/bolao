@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aposta: one
+  colocacao: 1
+  clube: one
+
+two:
+  aposta: two
+  colocacao: 1
+  clube: two

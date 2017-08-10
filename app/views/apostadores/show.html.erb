@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @apostador.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @apostador.email %>
+</p>
+
+<p>
+  <strong>Apostas:</strong>
+  <ul>
+    <% @apostador.apostas.each do |aposta| %>
+        <li>Aposta em: <%= aposta.created_at %></li>
+    <% end %>
+  </ul>
+
+
+</p>
+<%= link_to 'Nova aposta', new_aposta_path(apostador:@apostador) %> |
+<%= link_to 'Edit', edit_apostador_path(@apostador) %> |
+<%= link_to 'Back', apostadores_path %>

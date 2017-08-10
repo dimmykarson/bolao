@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Aposta:</strong>
+  <%= @apostaitem.aposta %>
+</p>
+
+<p>
+  <strong>Colocacao:</strong>
+  <%= @apostaitem.colocacao %>
+</p>
+
+<p>
+  <strong>Clube:</strong>
+  <%= @apostaitem.clube %>
+</p>
+
+<%= link_to 'Edit', edit_apostaitem_path(@apostaitem) %> |
+<%= link_to 'Back', apostaitems_path %>

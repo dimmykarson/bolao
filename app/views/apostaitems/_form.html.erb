@@ -1,0 +1,32 @@
+<%= form_with(model: apostaitem, local: true) do |form| %>
+  <% if apostaitem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apostaitem.errors.count, "error") %> prohibited this apostaitem from being saved:</h2>
+
+      <ul>
+      <% apostaitem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :aposta_id %>
+    <%= form.text_field :aposta_id, id: :apostaitem_aposta_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colocacao %>
+    <%= form.number_field :colocacao, id: :apostaitem_colocacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clube_id %>
+    <%= form.text_field :clube_id, id: :apostaitem_clube_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
